@@ -48,7 +48,7 @@ export default function Home() {
             transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-7xl md:text-9xl font-black italic uppercase tracking-tighter"
           >
-            the <span className="text-red-600">pookies</span>
+            ufc <span className="text-red-600">pookies</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 15 }}

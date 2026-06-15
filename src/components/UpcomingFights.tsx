@@ -170,7 +170,7 @@ export default function UpcomingFights({ upcomingFights }: UpcomingFightsProps) 
                   className="flex flex-col items-center bg-linear-to-b from-red-950/10 to-zinc-950/40 border border-red-900/10 rounded-xl p-2.5 md:p-3 shadow-inner relative overflow-hidden group/f1 w-full"
                 >
                   {/* Photo Container */}
-                  <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden bg-radial from-red-950/40 to-zinc-950 border border-red-900/20 mb-1.5 shadow-lg shadow-red-900/10 flex items-center justify-center p-1.5">
+                  <div className="relative w-full aspect-3/4 rounded-lg overflow-hidden bg-radial from-red-950/40 to-zinc-950 border border-red-900/20 mb-1.5 shadow-lg shadow-red-900/10 flex items-center justify-center p-1.5">
                     <Image
                       src={
                         selectedFight.fighter_1_img ||
@@ -185,12 +185,12 @@ export default function UpcomingFights({ upcomingFights }: UpcomingFightsProps) 
                   </div>
                   
                   {/* Fighter Name */}
-                  <h5 className="font-black text-xs md:text-sm text-center uppercase tracking-tight leading-tight italic font-display text-zinc-100 min-h-[34px] flex items-center justify-center">
+                  <h5 className="font-black text-xs md:text-sm text-center uppercase tracking-tight leading-tight italic font-display text-zinc-100 min-h-8.5 flex items-center justify-center">
                     {selectedFight.fighter_1_name}
                   </h5>
                   
                   {/* Fighter Record */}
-                  <div className="mt-0.5 min-h-[16px]">
+                  <div className="mt-0.5 min-h-4">
                     {selectedFight.fighter_1_record ? (
                       <span className="text-[8px] md:text-[9px] font-mono font-bold text-red-500 bg-red-950/30 border border-red-900/20 px-2 py-0.5 rounded-sm uppercase tracking-wider">
                         {selectedFight.fighter_1_record}
@@ -222,7 +222,7 @@ export default function UpcomingFights({ upcomingFights }: UpcomingFightsProps) 
                   className="flex flex-col items-center bg-linear-to-b from-zinc-900/10 to-zinc-950/40 border border-zinc-800/30 rounded-xl p-2.5 md:p-3 shadow-inner relative overflow-hidden group/f2 w-full"
                 >
                   {/* Photo Container */}
-                  <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden bg-radial from-zinc-900/40 to-zinc-950 border border-zinc-800/40 mb-1.5 shadow-lg flex items-center justify-center p-1.5">
+                  <div className="relative w-full aspect-3/4 rounded-lg overflow-hidden bg-radial from-zinc-900/40 to-zinc-950 border border-zinc-800/40 mb-1.5 shadow-lg flex items-center justify-center p-1.5">
                     <Image
                       src={
                         selectedFight.fighter_2_img ||
@@ -237,12 +237,12 @@ export default function UpcomingFights({ upcomingFights }: UpcomingFightsProps) 
                   </div>
                   
                   {/* Fighter Name */}
-                  <h5 className="font-black text-xs md:text-sm text-center uppercase tracking-tight leading-tight italic font-display text-zinc-100 min-h-[34px] flex items-center justify-center">
+                  <h5 className="font-black text-xs md:text-sm text-center uppercase tracking-tight leading-tight italic font-display text-zinc-100 min-h-8.5 flex items-center justify-center">
                     {selectedFight.fighter_2_name}
                   </h5>
                   
                   {/* Fighter Record */}
-                  <div className="mt-0.5 min-h-[16px]">
+                  <div className="mt-0.5 min-h-4">
                     {selectedFight.fighter_2_record ? (
                       <span className="text-[8px] md:text-[9px] font-mono font-bold text-red-500 bg-zinc-900/30 border border-zinc-800/30 px-2 py-0.5 rounded-sm uppercase tracking-wider">
                         {selectedFight.fighter_2_record}
