@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
-import { getAllFighters, Fighter } from "@/lib/fighters";
+import { Fighter } from "@/lib/fighters";
 import FighterCard from "@/components/FighterCard";
 
 export default function FightersPage() {
@@ -10,7 +10,7 @@ export default function FightersPage() {
 
   useEffect(() => {
     const fetchFighters = async () => {
-    const { data, error, status, statusText } = await supabase
+    const { data, error } = await supabase
     .from("fighters")
     .select("*")
     .eq('isPublished', true);

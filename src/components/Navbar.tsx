@@ -22,7 +22,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             className="text-3xl font-black italic tracking-tighter cursor-pointer"
           >
-            UFC<span className="text-red-600 underline decoration-4 underline-offset-4"></span>
+            pookies<span className="text-red-600 underline decoration-4 underline-offset-4"></span>
           </motion.h1>
         </Link>
         

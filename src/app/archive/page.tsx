@@ -36,7 +36,7 @@ export default function IconicFightPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className={`group relative overflow-hidden bg-zinc-900 rounded-sm border border-zinc-800 
-            aspect-video w-full transition-all duration-500 hover:border-zinc-500`}
+            aspect-video w-full transition-colors duration-500 hover:border-zinc-500`}
           >
             <Image
               src={fight.preview_img_url}

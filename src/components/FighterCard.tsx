@@ -14,19 +14,19 @@ interface FighterProps {
   priority?: boolean;
 }
 
-export default function FighterCard({ id, name, nickname, weight_class, image, slug, priority }: FighterProps) {
+export default function FighterCard({ name, nickname, weight_class, image, slug, priority }: FighterProps) {
   const [isLoading, setLoading] = useState(true);
   return (
     <Link href={`/fighters/${slug}`}>
       <motion.div 
         whileHover={{ scale: 1.05, zIndex: 10 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="relative aspect-9/16 w-full min-w-70 bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 cursor-pointer transition-all duration-500 group/card
+        transition={{ type: "spring", stiffness: 120, damping: 25 }}
+        className="relative aspect-9/16 w-full min-w-70 bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 cursor-pointer transition-[border-color,opacity,filter] duration-500 group/card
         hover:border-red-600/50 group-hover/container:opacity-60 hover:opacity-100! hover:blur-none! shadow-2xl">
         <Image fill
           src={image} 
           alt={name}
-          className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover/card:scale-110" bject-cover ease-out
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover/card:scale-110 ease-out
           ${isLoading ? "scale-110 opacity-0 blur-xl" : "scale-100 opacity-100 blur-0"}
       `} onLoad={() => setLoading(false)} 
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
@@ -41,7 +41,7 @@ export default function FighterCard({ id, name, nickname, weight_class, image, s
             {name}
           </h3>
           <p className="text-xs text-zinc-400 font-medium italic mt-1 opacity-0 group-hover/card:opacity-100 transition-opacity">
-            "{nickname}"
+            &ldquo;{nickname}&rdquo;
           </p>
         </div>
       </motion.div>

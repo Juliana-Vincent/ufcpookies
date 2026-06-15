@@ -33,7 +33,7 @@ export default function FighterProfile() {
 
     const loadRelatedData = async () => {
       const record = await getFighterRecord(fighter.id);
-      setFights(record as any); 
+      setFights(record); 
 
       const { data } = await supabase
         .from("fighters")
@@ -51,12 +51,12 @@ export default function FighterProfile() {
   const nextImage = useCallback(() => {
     if (activeIndex === null || !fighter?.gallery) return;
     setActiveIndex((activeIndex + 1) % fighter.gallery.length);
-  }, [activeIndex, fighter?.gallery]);
+  }, [activeIndex, fighter]);
 
   const prevImage = useCallback(() => {
     if (activeIndex === null || !fighter?.gallery) return;
     setActiveIndex((activeIndex - 1 + fighter.gallery.length) % fighter.gallery.length);
-  }, [activeIndex, fighter?.gallery]);
+  }, [activeIndex, fighter]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -74,7 +74,7 @@ export default function FighterProfile() {
   }, [activeIndex, nextImage, prevImage]);
 
   if (loading) return <div className="pt-40 text-center uppercase text-white">Loading fighter profile...</div>;
-  if (!fighter) return <div className="pt-32 text-center text-white">Fighter "{slug}" not found in mock data</div>;
+  if (!fighter) return <div className="pt-32 text-center text-white">Fighter &quot;{slug}&quot; not found in mock data</div>;
   console.log('main img: ', fighter.image_url);
 
   return (
@@ -293,7 +293,7 @@ export default function FighterProfile() {
               />
               ))
             ) : (
-              <p className="text-zinc-500 italic talic pointer-events-none">No similar fighters found in this division.</p>
+              <p className="text-zinc-500 italic pointer-events-none">No similar fighters found in this division.</p>
             )}
           </div>
         </div>

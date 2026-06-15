@@ -33,5 +33,5 @@ export async function getFighterRecord(fighterId: string): Promise<Fight[]> {
     return [];
   }
 
-  return data as any; 
+  return data as unknown as Fight[]; 
 }
